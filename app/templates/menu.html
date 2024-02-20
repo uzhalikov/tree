@@ -1,0 +1,17 @@
+<ul class="menu__items">
+    {% for menu_item in menu_items %}
+        {% if menu_item.get_children %}
+            <li class="menu__item">
+                <a href="#" class="bold" id="{{ menu_item }}">
+                    <span class="menu__item__click" data-name='{{ menu_item }}' onclick="showItems(this)">+</span>
+                    {{ menu_item.position|floatformat:0 }}. {{ menu_item }}
+                </a>
+                <ul class="menu__items__sub">
+                    {% for m_item in menu_item.get_children %}
+                        <li class="menu__item hidden"><a href="{% url 'photo' m_item.id %}"><span class="menu__item__click" data-link="{{ m_item.url }}">{{ m_item.position }}. {{ m_item }}</span></a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

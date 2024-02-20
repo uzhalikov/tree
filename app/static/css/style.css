@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a, a:visited{
+    color: #000;
+}
+.container{
+    width: 800px;
+}
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+}
+a{
+    text-decoration: none;
+}
+.menu__item{
+    margin-left: 10px;
+    width: max-content;
+}
+.bold{
+    font-weight: bold;
+}
+.hidden{
+    display: none;
+}
+.container__photo img{
+    width: 500px;
+}
+.active{
+    background: rgba(214, 175, 175, 0.414);
+}

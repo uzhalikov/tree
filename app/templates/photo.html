@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load common_tags %}
+
+{% block body %}
+    {% show_menu %}
+    <section class="container__photo">
+        <img src="{{ photo.url }}" alt="Фото животного">
+    </section>
+{% endblock %}
